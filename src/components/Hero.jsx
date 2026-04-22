@@ -1,6 +1,6 @@
 import styles from './Hero.module.css'
 
-export default function Hero(){
+export default function Hero({ onNavigate }){
     return( 
        <div className={styles.main}>
         <section className={styles.content}>
@@ -10,7 +10,7 @@ export default function Hero(){
             <p className={styles.subtitle}>
                 Discover a world beyond matrimony
             </p>
-            <button className={styles.matchButton}>
+            <button className={styles.matchButton} onClick={() => onNavigate('dashboard')}>
                 Find Your Match
             </button>
         </section>
